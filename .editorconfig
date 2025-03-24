@@ -1,0 +1,35 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# C# files
+[*.cs]
+
+# Core EditorConfig options
+indent_style = space
+indent_size = 4
+end_of_line = crlf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Code style rules
+dotnet_style_qualification_for_field = false:silent
+dotnet_style_qualification_for_property = false:silent
+dotnet_style_qualification_for_method = false:silent
+dotnet_style_qualification_for_event = false:silent
+
+# Suppress specific warnings
+dotnet_diagnostic.CS8604.severity = silent  # Possible null reference argument for parameter
+dotnet_diagnostic.CS8600.severity = silent  # Converting null literal or possible null value to non-nullable type
+dotnet_diagnostic.CS8602.severity = silent  # Dereference of a possibly null reference
+dotnet_diagnostic.CS8603.severity = silent  # Possible null reference return
+dotnet_diagnostic.CS8618.severity = silent  # Non-nullable field must contain a non-null value
+dotnet_diagnostic.IDE0059.severity = silent # Unnecessary assignment
+dotnet_diagnostic.CA1050.severity = silent  # Declare types in namespaces
+dotnet_diagnostic.CA1852.severity = silent  # Type can be sealed
+dotnet_diagnostic.CA2007.severity = silent  # Consider calling ConfigureAwait on awaited task
+
+# CA1305: Specify IFormatProvider
+dotnet_diagnostic.CA1305.severity = silent
