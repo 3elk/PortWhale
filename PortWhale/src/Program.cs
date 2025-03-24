@@ -44,7 +44,7 @@ class PortScanner
             Console.WriteLine("OPEN PORTS >>\n");
             foreach (var port in sortedPorts)
             {
-                Console.WriteLine($"PORT {port} | ✓ OPEN");
+                Console.WriteLine($"PORT {port} | OPEN");
             }
         }
 
@@ -60,11 +60,11 @@ class PortScanner
             {
                 tcpClient.Connect(ipAddress, port);
                 openPorts.Add(port);
-                Console.WriteLine($"PORT {port} | ✓");
+                Console.WriteLine($"PORT {port} | OPEN");
             }
             catch(Exception)
             {
-                Console.WriteLine($"PORT {port} | ✕");
+                Console.WriteLine($"PORT {port} | CLOSED");
             }
             finally
             {
